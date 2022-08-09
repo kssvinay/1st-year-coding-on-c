@@ -1,0 +1,19 @@
+/* k.s.s.vinay  ADCKKD 8th aug assignment */
+#include<stdio.h>
+int main(){
+    int n,s=0,r;
+    printf("enter");
+    scanf("%d\n",&n);
+    r=n;
+    for(int i=0;n!=0;i++){
+        printf("%d",s);
+        s+=(n%10)*(n%10)*(n%10);
+        n/=10;
+    }
+    if(r == s){
+        printf("armstrong number");
+    }else{
+        printf("not an srmstrong number");
+    }
+    return 0;
+}
