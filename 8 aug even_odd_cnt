@@ -1,0 +1,17 @@
+/* k.s.s.vinay  ADCKKD 8th aug assignment */
+#include<stdio.h>
+int main(){
+    int n,ec=0,oc=0;
+    printf("enter some value");
+    scanf("%d",&n);
+    for(int i=0;n!=0;i++){
+        if((n%10)%2==0){
+            ec += n%10;
+        }else{
+            oc+= n%10;
+        }
+        n = n/10;
+    }
+    printf("odd %d , \n even %d",oc,ec);
+    return 0;
+}
