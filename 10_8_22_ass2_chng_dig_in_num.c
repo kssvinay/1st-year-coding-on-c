@@ -25,8 +25,8 @@ int main()
         }
        // num += ((*(ptr+i))*(10**i));
         num+=*(ptr+i) * pow(10,i);
-        printf("%d\t",num);
     }
+        printf("%d\t",num);
 
     return 0;
 }
