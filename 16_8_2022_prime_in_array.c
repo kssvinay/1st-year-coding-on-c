@@ -1,3 +1,4 @@
+
 /* 
 Write a c program to check each and every number of array if it is prime or not 
 and display all prime numbers of array from right to left?
@@ -8,17 +9,21 @@ and display all prime numbers of array from right to left?
 
 int main()
 {
-    int arr[100],cnt;
-    for(int i=0;i<100;i++){
+    int arr[100],cnt,i,n;
+    printf("enter size of array: ");
+    scanf("%d",&n);
+    for( i=0;i<n;i++){
         scanf("%d",&arr[i]);
+    }
+    for(int k=n-1;k>=0;k--){
         cnt=0;
-        for(int j=1;j<=arr[i];j++){
-            if(arr[i]%j==0){
+        for(int j=1;j<=arr[k];j++){
+            if(arr[k]%j==0){
                 cnt++;
             }
         }
         if(cnt==2){
-            printf("%d",arr[i]);
+            printf("%d\t",arr[k]);
         }
     }
 
