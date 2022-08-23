@@ -1,3 +1,8 @@
+/*
+* Write a c program to print Row sum value , where Row number is supplied 
+by the user at run time?
+*/
+
 #include<stdio.h>
 void main()
 {
