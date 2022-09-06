@@ -11,34 +11,29 @@ Input:
 output:
 1 2 3 4 5
 */
-
 #include<stdio.h>
-
-void readdet(int *p,int *q,int n){
-    if(*q<n){
-        scanf("%d",*p+*q);
-        *q++;
-        readdet(p,q,n);
-    }else{
-        return 0;
-    }
+void dis(int x[],int s,int e);
+int main()
+{
+	int a[100];
+	int n,i;
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+	int l=n-1;
+	display(a,0,l);
 }
-void printdet(int *p,int *q,int n){
-    if(*q<n){
-        printf("%d",*p+*q);
-        *q++;
-        printdet(p,q,n);
-    }else{
-        return 0;
-    }
-}
-int main(){
-    int n,arr[50],i=0;
-    scanf("%d",&n);
-    printf("Enter values");
-    readdet(&arr,&i,n);
-    i=0;
-    printdet(&arr,&i,n);
-    
-    return 0;
+void display(int x[],int s,int e)
+{
+	if(s>e)
+	{
+		return;
+	}
+	else
+	{
+		printf("%d\t",x[s]);
+		display(x,s+1,e);
+	}
 }
