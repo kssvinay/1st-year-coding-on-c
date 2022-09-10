@@ -12,8 +12,8 @@ struct node *ref;
 
 struct node *head;
 
-void binsert();// insertion at begin
-void display();// shows how many elements in the list
+void binsert();
+void display();
 
 void main()
 {
